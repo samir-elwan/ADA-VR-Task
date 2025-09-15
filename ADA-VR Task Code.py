@@ -62,6 +62,7 @@ def main():
         if login_attempt:
             print("Time vector (login attempt):", [round(t, 3) for t in login_attempt])
 
+    # compute the Euclidean distance between the login attempt vector and the average vector
     distance = np.linalg.norm(np.array(login_attempt) - avg_vector)
     threshold = 0.6  
 
@@ -74,3 +75,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
